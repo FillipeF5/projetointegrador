@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+html, body, div, span, iframe,
+h1, h2, h3, h4, h5, h6, p, img, tt,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, tbody, tfoot, thead, tr, th, td, footer, header, nav, section {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+* {
+    padding:0;
+    margin:0;
+    vertical-align:baseline;
+    list-style:none;
+    border:0
+}
+
+.logo img {margin: auto 50px;}
+.container { margin: 0 auto; width: 80vw;}
+header, footer { background-color: #3A2E8A; }
+.cabecalho, .rodape {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* HEADER */
+
+.nav-menu { 
+    background-color: #577ec75d;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    margin: 10px 20px;
+    border-radius: 10px;
+}
+.nav-menu li {
+    padding-right: 20px;
+    font-weight: 400;
+    font-size: 16px;
+    margin: 0 10px;
+}
+.nav-menu li a{
+    text-decoration: none;
+    color:white;
+}
+.nav-menu svg { margin: auto 10px; color:white; border:none;}
+.nav-menu svg:hover, .nav-menu li:hover a {
+    color: black;
+    transition: .5s ease-in-out;
+    cursor:pointer;
+}
+.entrar { background-color: #3A2E8A; border-radius: 10px; padding: 8px; cursor: pointer;}
+.entrar:hover { background-color: #577ec75d;}
+.entrar a { text-transform: uppercase; }
+
+
+
+/* MAIN */
+main#login { background-image: url("../img/giphy.gif"); background-repeat: no-repeat; background-size:cover; }
+
+.conteudo {
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.conteudo > h1 {font-family: 'Roboto',sans-serif; font-weight: 400; color: black; font-size: 48px;}
+
+
+/* LOGIN */
+.box-login {
+    background-color: rgba(255, 255, 255, 0.138);
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    width: 30%;
+    padding-bottom: 20px;
+    border: 1px solid grey;
+    box-shadow: 1px 1px 5px grey;
+}
+.box-login a img { margin: 10px auto; display: flex; justify-content: center; border-radius: 10px; opacity: .8;}
+form { display: flex; flex-direction: column; margin: 0 50px; font-family: 'Roboto', sans-serif;}
+form input {width: 100%; border-radius: 5px; margin: 5px auto; font-size: 20px;}
+form button {width: 100%; border-radius: 10px; font-size: 16px; padding: 5px; margin: 5px auto;border:none; }
+form a {margin: 0 auto; font-weight: 400; text-decoration: none; color: rgb(43, 43, 167)}
+form button:hover {background-color: #577ec75d; transition: .5s ease-in-out; cursor: pointer; box-shadow: 1px 1px 5px black; border: none; color:white;}
+form #password::placeholder, form #email::placeholder {padding: 5px; font-size: 12px;}
+.icon-google { width: 18px; height: 18px; margin-left: 5px;}
+.btn-login {background-color: #3A2E8A;}
+
+
+
+/* FOOTER */
+
+.nav-footer {
+    display: flex;
+    align-items: left;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #577ec75d; border-radius: 10px;
+    margin: 10px 20px;
+}
+
+.nav-footer ul {
+    margin: 0 40px;
+    font-size: 12px;
+}
+.nav-footer li {padding: 5px;}
+.nav-footer li a{
+    text-decoration: none;
+    color: white;
+}
+.nav-footer li:hover a{
+    color: black;
+}
+.redes-sociais { 
+    width: 20%;
+    display: flex; 
+    justify-content: space-between; 
+    padding: 10px;
+    color: white;
+}
+.redes-sociais svg { width: 20px; }
+.redes-sociais svg:hover { color: black; cursor: pointer; transition: .5s ease-in-out; }
