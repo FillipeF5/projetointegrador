@@ -58,8 +58,8 @@ header, footer { background-color: #3A2E8A; }
     transition: .5s ease-in-out;
     cursor:pointer;
 }
-.entrar { background-color: #3A2E8A; border-radius: 10px; padding: 8px; cursor: pointer;}
-.entrar:hover { background-color: #577ec75d;}
+.entrar { background-color: #3A2E8A; border-radius: 10px; padding: 8px; box-shadow: 1px 1px 2px black;}
+.entrar:hover { background-color: #577ec75d; cursor: pointer;}
 .entrar a { text-transform: uppercase; }
 
 
@@ -131,3 +131,34 @@ form #password::placeholder, form #email::placeholder {padding: 5px; font-size: 
 }
 .redes-sociais svg { width: 20px; }
 .redes-sociais svg:hover { color: black; cursor: pointer; transition: .5s ease-in-out; }
+
+
+
+
+
+/* CARD HOME IPHONE */
+.content-iphone { display: flex; justify-content: space-around; flex-wrap: wrap; padding: 20px; border: 1px solid #3A2E8A;}
+.card-iphone { margin: 20px auto; width: 30%; border: 2px solid #3A2E8A; border-radius: 10px;}
+.card-iphone img { width: 50%; display: flex; margin: 20px auto; align-items: center;}
+.card-iphone .info-tag { display: flex; flex-direction: column; margin: 0 20px; }
+
+
+
+
+/* DASHBOARD */
+
+.dashboard { display: flex; justify-content: space-between; }
+.nav-lateral { width: 14%;  background-color: #577ec7;}
+.links-lateral { padding: 5px; }
+.links-lateral ul { margin: 0 auto; padding: 10px 2px 10px 2px;}
+.links-lateral ul li { margin: 15px auto; width: 100%; padding: 8px;}
+.links-lateral ul li:hover { background-color: #3A2E8A; cursor: pointer; border-radius: 15px; color: white;}
+
+
+.row-fluid { width: 85%; }
+.row-container { display: flex; flex-direction: column; width: 95%; margin: 10px auto;  }
+.box-search { width: 25%; margin: 20px; padding: 8px; display: flex; justify-content: space-between; align-items: center; border: 1px solid black; border-radius: 10px;}
+.box-search input { width: 90%;}
+.tag-status { background-color: green; color:white; text-align: center; border-radius: 15px; font-size: 12px; padding: 5px; box-shadow: 1px 1px 2px black;}
+.btn-more { background-color: rgba(128, 128, 128, 0.261); border-radius: 15px; padding: 2px; text-align: center; box-shadow: 1px 1px 2px black;}
+.btn-more:hover { cursor: pointer; background-color: rgba(133, 133, 133, 0.576);}
