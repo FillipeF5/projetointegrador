@@ -41,37 +41,75 @@
         
         <div class="container">
             
-            <section class="">
+            <section class="carrousel-section">
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="./img/novo-apple-watch.gif" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="./img/celulares.jpg" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="./img/samsung-flip.gif" class="d-block w-100" alt="...">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+            </section>
+
+            <section class="card-section">
+                
                 <div class="content-iphone">
 
-                    <div class="card-iphone">
-                        <img src="./img/iphone-13-rose.jpg" alt="iphone 13 rose">
-                        <div class="info-tag">
-                            <p class="product-name"><a href="#">Apple iPhone 13 - Rose</a></p>
-
-                            <p class="price-tag">R$ 13.449,00</p>
-                            <p class="price-installments">12x de R$ 1.184,20</p>
-                        </div>
-
-                    </div>
-                    <div class="card-iphone">
-                        <img src="./img/iphone-13-pro-blue.png" alt="iphone 13 pro blue">
-                        <div class="info-tag">
-                            <p class="product-name"><a href="#">Apple iPhone 13 - Rose</a></p>
-
-                            <p class="price-tag">R$ 13.449,00</p>
-                            <p class="price-installments">12x de R$ 1.184,20</p>
+                    <div class="card" style="width: 17rem;">
+                        <img src="./img/iphone-13-pro-blue.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Apple iPhone 13 Pro - Blue</h5>
+                            <p class="card-price">R$ 13.397,00</p>
+                            <div class="card-text">
+                                <p>iOS · Tela de 6,06 polegadas · 128 GB · 5G · Resistente à água ·</p>
+                            </div>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
                         </div>
                     </div>
-                    <div class="card-iphone">
-                        <img src="./img/iphone-13-pro-blue.png" alt="iphone 13 pro blue">
-                        <div class="info-tag">
-                            <p class="product-name"><a href="#">Apple iPhone 13 - Rose</a></p>
-
-                            <p class="price-tag">R$ 13.449,00</p>
-                            <p class="price-installments">12x de R$ 1.184,20</p>
+                    <div class="card" style="width: 17rem;">
+                        <img src="./img/iphone-13-rose.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Apple iPhone 13 - Rose</h5>
+                            <p class="card-price">R$ 11.439,00</p>
+                            <div class="card-text">
+                                <p>iOS · Tela de 6,06 polegadas · 64 GB · 5G · Resistente à água ·</p>
+                            </div>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
                         </div>
                     </div>
+                    <div class="card" style="width: 17rem;">
+                        <img src="./img/galaxy-note20-mystic-bronze.webp" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Galaxy Note20 Mystic - Bronze</h5>
+                            <p class="card-price">R$ 929,99</p>
+                            <div class="card-text">
+                                <p>Android · Tela Infinita de 6.7 · 256GB · Compartilhamento de Bateria sem fio · Caneta S-Pen com controle por Gestos</p>
+                            </div>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                    
+
+                    
                     
                 </div>
             </section>
@@ -118,10 +156,9 @@
                 <div class="nav-footer">
                     <ul class="produtos">
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="">TV & Áudio</a></li>
                         <li><a href="">Informática</a></li>
                         <li><a href="">Celulares</a></li>
-                        <li><a href="">Games</a></li>
+                        <li><a href="">Acessorios</a></li>
                     </ul>
                     <ul class="sobrenos">
                         <li><a href="#">Quem somos</a></li>

@@ -21,8 +21,8 @@ table, tbody, tfoot, thead, tr, th, td, footer, header, nav, section {
     border:0
 }
 
-.logo img {margin: auto 50px;}
-.container { margin: 0 auto; width: 80vw;}
+.logo img {margin: auto 10px;}
+.container { margin: 0 auto; width: 95vw;}
 header, footer { background-color: #3A2E8A; }
 .cabecalho, .rodape {
     display: flex;
@@ -136,11 +136,20 @@ form #password::placeholder, form #email::placeholder {padding: 5px; font-size: 
 
 
 
-/* CARD HOME IPHONE */
-.content-iphone { display: flex; justify-content: space-around; flex-wrap: wrap; padding: 20px; border: 1px solid #3A2E8A;}
-.card-iphone { margin: 20px auto; width: 30%; border: 2px solid #3A2E8A; border-radius: 10px;}
-.card-iphone img { width: 50%; display: flex; margin: 20px auto; align-items: center;}
-.card-iphone .info-tag { display: flex; flex-direction: column; margin: 0 20px; }
+/* MAIN HOME */
+.carrousel-section { margin: 20px auto; }
+.carousel-item img { border-radius: 10px; }
+
+.content-iphone { display: flex; justify-content: space-around; padding: 20px; }
+.content-iphone .card .card-title { font-size: 1rem; }
+.content-iphone .card img { height: 70%; }
+.content-iphone .card:hover { cursor: pointer; box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.481);}
+.card-body {  display: flex; flex-direction: column; justify-content: space-between; }
+.card-price { font-size: 1rem; font-weight: 400; }
+.card-text {  font-size: .8rem; margin-bottom: 5px;}
+
+.card-body-hidden { display: none;}
+
 
 
 
@@ -148,11 +157,13 @@ form #password::placeholder, form #email::placeholder {padding: 5px; font-size: 
 /* DASHBOARD */
 
 .dashboard { display: flex; justify-content: space-between; }
-.nav-lateral { width: 14%;  background-color: #577ec7;}
+.nav-lateral { width: 14%;  background-color: #3A2E8A;}
 .links-lateral { padding: 5px; }
 .links-lateral ul { margin: 0 auto; padding: 10px 2px 10px 2px;}
 .links-lateral ul li { margin: 15px auto; width: 100%; padding: 8px;}
-.links-lateral ul li:hover { background-color: #3A2E8A; cursor: pointer; border-radius: 15px; color: white;}
+.links-lateral ul li:hover { background-color: #577ec75d; cursor: pointer; border-radius: 15px;}
+.links-lateral ul li a { text-decoration: none; color: black; width: 100%; padding: 2px;}
+.links-lateral ul li:hover a { color: white;}
 
 
 .row-fluid { width: 85%; }
@@ -166,5 +177,7 @@ form #password::placeholder, form #email::placeholder {padding: 5px; font-size: 
 
 
 .tag-status { background-color: green; color:white; text-align: center; border-radius: 15px; font-size: 12px; padding: 5px; box-shadow: 1px 1px 2px black;}
-.btn-more { background-color: rgba(128, 128, 128, 0.261); border-radius: 15px; padding: 2px; text-align: center; box-shadow: 1px 1px 2px black;}
-.btn-more:hover { cursor: pointer; background-color: rgba(133, 133, 133, 0.576);}
+.btn-edit, .btn-view, .btn-delete { border-radius: 15px; padding: 2px; text-align: center; box-shadow: 1px 1px 2px black;}
+.btn-delete { color: red; font-weight: bold;}
+.btn-edit:hover, .btn-view:hover { cursor: pointer; background-color: rgba(133, 133, 133, 0.33);}
+.btn-delete:hover { cursor: pointer; background-color: rgba(255, 0, 0, 0.652); color: black; }
