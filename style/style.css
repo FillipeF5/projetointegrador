@@ -156,6 +156,12 @@ form #password::placeholder, form #email::placeholder {padding: 5px; font-size: 
 
 /* DASHBOARD */
 
+.header-admin { display:flex; height: 50px;}
+.header-admin .company-name { width: 14%; padding: 2px; text-align: left; background-color: #577ec75d; color: black; }
+.header-admin .company-name h5 { font-size: 1.5rem; font-style: italic; margin: 2px auto; text-align: center;}
+.header-admin .admin-search-top {  width: 86%;}
+.header-admin .admin-search-top input { width: 90%; height: 90%; padding: 2px; margin: 2px auto;}
+
 .dashboard { display: flex; justify-content: space-between; }
 .nav-lateral { width: 14%;  background-color: #3A2E8A;}
 .links-lateral { padding: 5px; }
@@ -166,7 +172,7 @@ form #password::placeholder, form #email::placeholder {padding: 5px; font-size: 
 .links-lateral ul li:hover a { color: white;}
 
 
-.row-fluid { width: 85%; }
+.row-fluid { width: 86%; }
 .row-container { display: flex; flex-direction: column; width: 95%; margin: 10px auto;  }
 .box-search { width: 25%; margin: 20px; padding: 8px; display: flex; justify-content: space-between; align-items: center; border: 1px solid black; border-radius: 10px;}
 .box-search input { width: 90%;}
