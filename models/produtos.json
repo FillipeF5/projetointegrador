@@ -1,0 +1,20 @@
+[
+    {
+        "imagem": "public/images/iphone-13-pro-blue.png",
+        "title": "Apple iPhone 13 Pro - Blue",
+        "price": 13.397,
+        "polegadas": "Tela de 6,06 polegadas",
+        "os": "iOS",
+        "memoriasd": "128 GB",
+        "waterproof": "Resistente à água"
+    },
+    {
+        "imagem": "images/iphone-13-pro-blue.png",
+        "title": "Apple iPhone 13 - Black",
+        "price": 11.649,
+        "polegadas": "Tela de 6,06 polegadas",
+        "os": "iOS",
+        "memoriasd": "64 GB",
+        "waterproof": "Resistente à água"
+    }
+]

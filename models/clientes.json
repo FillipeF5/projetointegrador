@@ -1,0 +1,18 @@
+[
+    {
+        "nome": "Sheldon Cooper",
+        "email": "drcooper@caltech.com",
+        "nascimento": "01/04/1990",
+        "genero": "M",
+        "cidade": "Pasadena",
+        "status": "Ativo"
+    },
+    {
+        "nome": "Bruce Wayne",
+        "email": "srwayne@waynesa.com",
+        "nascimento": "01/04/1989",
+        "genero": "M",
+        "cidade": "Gotham",
+        "status": "nasSombras"
+    }
+]
