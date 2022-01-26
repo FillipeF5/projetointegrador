@@ -1,20 +1,32 @@
 [
     {
         "imagem": "public/images/iphone-13-pro-blue.png",
-        "title": "Apple iPhone 13 Pro - Blue",
+        "title": "Apple iPhone 13 Pro",
+        "color": "Blue",
         "price": 13.397,
-        "polegadas": "Tela de 6,06 polegadas",
+        "polegadas": "6,6 polegadas",
         "os": "iOS",
         "memoriasd": "128 GB",
-        "waterproof": "Resistente à água"
+        "waterproof": "sim"
     },
     {
         "imagem": "images/iphone-13-pro-blue.png",
-        "title": "Apple iPhone 13 - Black",
+        "title": "Apple iPhone 13 ",
+        "color": "Black",
         "price": 11.649,
-        "polegadas": "Tela de 6,06 polegadas",
+        "polegadas": "6,6 polegadas",
         "os": "iOS",
         "memoriasd": "64 GB",
-        "waterproof": "Resistente à água"
+        "waterproof": "sim"
+    },
+    {
+        "imagem": "",
+        "title": "Samsung A270",
+        "color": "Silver",
+        "price": 879,
+        "polegadas": "5,5 polegadas",
+        "os": "Android 8.1",
+        "memoriasd": "64 GB",
+        "waterproof": "não"
     }
 ]

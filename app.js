@@ -47,7 +47,7 @@ app.use(function(err, req, res, next) {
 });
 
 app.listen(3000, () => {
-  console.log(`Ce ta na rodando igual peão na porta 3000 zé `);
+  console.log(`Server is running...`);
 })
 
 module.exports = app;
