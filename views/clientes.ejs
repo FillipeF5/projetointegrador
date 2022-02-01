@@ -24,8 +24,8 @@
             <div class="links-lateral">
                 <ul>
                     <li><a href="/dashboard">Home</a></li>
-                    <li><a href="/clientes">Clients</a></li>
-                    <li><a href="/produtos">Products</a></li>
+                    <li><a href="/dashboard/clientes">Clients</a></li>
+                    <li><a href="/dashboard/produtos">Products</a></li>
                 </ul>
             </div>
         </div>
@@ -70,7 +70,7 @@
                         <tbody>
                             <% clientes.forEach(cliente => { %>
                                 <tr>
-                                    <th scope="row">2</th>
+                                    <th scope="row"> <%= cliente.id %> </th>
                                     <td> <%= cliente.nome %>  </td>
                                     <td> <%= cliente.email %> </td>
                                     <td> <%= cliente.nascimento %> </td>

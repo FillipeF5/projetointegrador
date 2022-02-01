@@ -24,8 +24,8 @@
             <div class="links-lateral">
                 <ul>
                     <li><a href="/dashboard">Home</a></li>
-                    <li><a href="/clientes">Clients</a></li>
-                    <li><a href="/produtos">Products</a></li>
+                    <li><a href="/dashboard/clientes">Clients</a></li>
+                    <li><a href="/dashboard/produtos">Products</a></li>
                 </ul>
             </div>
         </div>
@@ -53,68 +53,77 @@
                     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                           <div class="modal-content">
-                            <div class="modal-header">
-                              <h5 class="modal-title" >Adicionar produto</h5>
-                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                              <form>
-                                <div class="input-group mb-3">
-                                    <span class="input-group-text" id="basic-addon1">Título</span>
-                                    <input type="text" class="form-control" placeholder="titulo" aria-label="Titulo" aria-describedby="basic-addon1">
-                                </div>
-                                  
-                                <div class="input-group mb-3">
-                                    <span class="input-group-text" id="basic-addon1">Cor</span>
-                                    <input type="text" class="form-control" placeholder="cor" aria-label="Cor" aria-describedby="basic-addon1">
-                                </div>
-                                <div class="input-group mb-3">
-                                    <span class="input-group-text">R$</span>
-                                    <input type="text" class="form-control" placeholder="preço">
-                                    <span class="input-group-text">,00</span>
-                                </div>
-                                <div class="input-group mb-3">
-                                    <span class="input-group-text" id="basic-addon1">Tela</span>
-                                    <input type="text" class="form-control" placeholder="tela" aria-label="tela" aria-describedby="basic-addon1">
-                                </div>
-                                <div class="input-group mb-3">
-                                    <label class="input-group-text" for="inputGroupSelect01">O.S</label>
-                                    <select class="form-select" id="inputGroupSelect01">
-                                      <option selected>-</option>
-                                      <option value="1">iOS</option>
-                                      <option value="2">Android</option>
-                                      <option value="3">Outro (descreva na box de "outras informações"</option>
-                                    </select>
-                                  </div>
-                                <div class="input-group mb-3">
-                                    <span class="input-group-text" id="basic-addon1">Memoria</span>
-                                    <input type="text" class="form-control" placeholder="memoria" aria-label="memoria sd" aria-describedby="basic-addon1">
-                                </div>
-                                <div class="input-group mb-2">
-                                    <label class="input-group-text" for="inputGroupSelect01">A prova d'agua?</label>
-                                    <select class="form-select" id="inputGroupSelect01">
-                                      <option selected>-</option>
-                                      <option value="1">Sim</option>
-                                      <option value="2">Não</option>
-                                    </select>
-                                </div>
 
-                                <div class="input-group">
-                                    <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload" placeholder="adicionar imagem">
-                                    <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">Enviar</button>
-                                </div>
-                                  
-                                <div class="input-group">
-                                    <span class="input-group-text">Outras informações</span>
-                                    <textarea class="form-control" aria-label="With textarea"></textarea>
-                                </div>
-                                
-                              </form>
+                            <div class="modal-header">
+                                <h5 class="modal-title" >Adicionar produto</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
-                            <div class="modal-footer">
-                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                              <button type="button" class="btn btn-primary">Salvar</button>
+
+                            <div class="modal-body">
+                                <form action="/dashboard/produtos/create" method="POST" >
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text" for="title" id="basic-addon1">Título</span>
+                                        <input type="text" name="title" class="form-control" placeholder="titulo" aria-label="Titulo" aria-describedby="basic-addon1">
+                                    </div>
+                                    
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text" id="basic-addon1">Cor</span>
+                                        <input type="text" name="color" class="form-control" placeholder="cor" aria-label="Cor" aria-describedby="basic-addon1">
+                                    </div>
+
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text">R$</span>
+                                        <input type="text" name="price" class="form-control" placeholder="preço">
+                                        <span class="input-group-text">,00</span>
+                                    </div>
+
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text" id="basic-addon1">Tela</span>
+                                        <input type="text" name="polegadas" class="form-control" placeholder="tela" aria-label="tela" aria-describedby="basic-addon1">
+                                    </div>
+
+                                    <div class="input-group mb-3">
+                                        <label class="input-group-text" for="inputGroupSelect01">O.S</label>
+                                        <select class="form-select" name="os" id="inputGroupSelect01">
+                                        <option selected>-</option>
+                                        <option value="iOS">iOS</option>
+                                        <option value="Android">Android</option>
+                                        <option value="Outro">Outro (descreva na box de "outras informações)"</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text" id="basic-addon1">Memoria</span>
+                                        <input type="text" name="memoriasd" class="form-control" placeholder="memoria" aria-label="memoria sd" aria-describedby="basic-addon1">
+                                    </div>
+
+                                    <div class="input-group mb-2">
+                                        <label class="input-group-text" for="inputGroupSelect01">A prova d'agua?</label>
+                                        <select name="waterproof" class="form-select" id="inputGroupSelect01">
+                                        <option selected>-</option>
+                                        <option value="Sim">Sim</option>
+                                        <option value="Não">Não</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- <div class="input-group">
+                                        <input type="file" name="imagem" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload" placeholder="adicionar imagem">
+                                        <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">Enviar</button>
+                                    </div>
+                                    
+                                    <div class="input-group">
+                                        <span class="input-group-text">Outras informações</span>
+                                        <textarea class="form-control" aria-label="With textarea"></textarea>
+                                    </div> -->
+
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                                        <button type="submit" class="btn btn-primary">Salvar</button>
+                                    </div>
+                                </form>
+                              
                             </div>
+                            
                           </div>
                         </div>
                     </div>
@@ -130,29 +139,31 @@
                                 <th scope="col">Titulo</th>
                                 <th scope="col">Cor</th>
                                 <th scope="col">Preço</th>
-                                <th scope="col">Tela "</th>
+                                <th scope="col">Tela (em polegadas)</th>
                                 <th scope="col">O.S</th>
                                 <th scope="col">Memoria SD</th>
-                                <th scope="col">à prova d'água</th>                        
+                                <th scope="col">à prova d'água?</th>                        
                             </tr>
                         </thead>
                         <tbody>
                             <% produtos.forEach(produto => { %>
                                 <tr>
-                                    <th scope="row">2</th>
+                                    <th scope="row"> <%= produto.id %> </th>
                                     <td> <%= produto.title %>  </td>
                                     <td> <%= produto.color %>  </td>
-                                    <td> <%= produto.price %> </td>
+                                    <td> <%= produto.price %>,00 </td>
                                     <td> <%= produto.polegadas %> </td>
                                     <td> <%= produto.os %> </td>
-                                    <td> <%= produto.memoriasd %> </td>
+                                    <td> <%= produto.memoriasd %> GB</td>
                                     <td> <%= produto.waterproof %> </td>
                                     <td>
                                         <div class="btn-edit" title="editar">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
-                                                <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
-                                                <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
-                                            </svg>
+                                            <a href="/dashboard/produtos/<%= produto.id  %>/editar">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                                    <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                                                    <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+                                                </svg>
+                                            </a>
                                         </div>
                                     </td>
                                     <td>
@@ -165,10 +176,10 @@
                                     </td>
                                     <td>
                                         <div class="btn-delete" title="deletar">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                            <a href="deletar/id"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
                                                 <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
                                                 <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
-                                            </svg>
+                                            </svg></a>
                                         </div>
                                     </td>
                                 </tr>
@@ -178,8 +189,6 @@
                     </table>
 
                 </div>
-
-
             </div>
 
         </div>

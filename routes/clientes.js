@@ -4,6 +4,6 @@ const ControlladorClientes = require('../controllers/clientesController');
 
 
 /* GET clients listing. */
-router.get('/', ControlladorClientes.index);
+router.get('/clientes', ControlladorClientes.index);
 
 module.exports = router;
