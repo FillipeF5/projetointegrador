@@ -4,8 +4,10 @@ const controlladorDashboard = {
         res.render('dashboard');
     },
     clientes: (req, res) => {
-        res.render('clientes')
-    }
+        res.render('clientes');
+    },
+    produtos: (req, res) => {
+        res.render('produtos');
+}
 };
-
 module.exports = controlladorDashboard;
