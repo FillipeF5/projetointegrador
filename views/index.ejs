@@ -45,12 +45,12 @@
             
             <% produtos.forEach(produto => { %>
               <div class="card" style="width: 17rem;">
-                <img src="" class="card-img-top" alt="">
+                <img src="<%= produto.imagem %>" class="card-img-top" alt=""/>
                 <div class="card-body">
-                     <h5 class="card-title">  <%= produto.title %>   </h5>
+                     <h5 class="card-title">  <%= produto.title %> - <%= produto.color %>   </h5>
                       <p class="card-price">R$ <%= produto.price %>,00</p>
                         <div class="card-text">
-                            <p><%= produto.os %> · <%= produto.polegadas %> · <%= produto.memoriasd %> · <%= produto.waterproof %></p>
+                            <p><%= produto.os %> · Tela de <%= produto.polegadas %> · <%= produto.memoriasd %> · Resistente à agua</p>
                         </div>
                         <a href="#" class="btn btn-primary">Go somewhere</a>
                 </div>

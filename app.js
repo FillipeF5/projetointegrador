@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const methodOverride = require("method-override");
 
 const indexRouter = require('./routes/index');
 const dashboardRouter = require('./routes/dashboard');
@@ -22,6 +23,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(methodOverride('_method'));
+
 
 app.use('/', indexRouter);
 app.use('/dashboard', dashboardRouter);
@@ -47,7 +50,7 @@ app.use(function(err, req, res, next) {
 });
 
 app.listen(3000, () => {
-  console.log(`Ce ta na rodando igual peão na porta 3000 zé `);
+  console.log(`Server is running...`);
 })
 
 module.exports = app;

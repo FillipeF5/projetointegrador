@@ -1,5 +1,6 @@
 [
-    {
+    {   
+        "id": 1,
         "nome": "Sheldon Cooper",
         "email": "drcooper@caltech.com",
         "nascimento": "01/04/1990",
@@ -7,12 +8,22 @@
         "cidade": "Pasadena",
         "status": "Ativo"
     },
-    {
+    {   
+        "id": 2,
         "nome": "Bruce Wayne",
-        "email": "srwayne@waynesa.com",
+        "email": "srwayne@wayneenterprise.com",
         "nascimento": "01/04/1989",
         "genero": "M",
         "cidade": "Gotham",
-        "status": "nasSombras"
+        "status": "Rich"
+    },
+    {   
+        "id": 3,
+        "nome": "Tony Stark",
+        "email": "ironman@stark.com",
+        "nascimento": "01/04/1985",
+        "genero": "M",
+        "cidade": "New York",
+        "status": "Ativo"
     }
 ]
