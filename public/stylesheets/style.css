@@ -91,6 +91,7 @@ main#login { background-image: url("/images/giphy.gif"); background-repeat: no-r
 form { display: flex; flex-direction: column; margin: 0 50px; font-family: 'Roboto', sans-serif;}
 form input {width: 100%; border-radius: 5px; margin: 5px auto; font-size: 20px;}
 form button {width: 100%; border-radius: 10px; font-size: 16px; padding: 5px; margin: 5px auto;border:none; }
+form button a { text-decoration: none; color: black; }
 form a {margin: 0 auto; font-weight: 400; text-decoration: none; color: rgb(43, 43, 167)}
 form button:hover {background-color: #577ec75d; transition: .5s ease-in-out; cursor: pointer; box-shadow: 1px 1px 5px black; border: none; color:white;}
 form #password::placeholder, form #email::placeholder {padding: 5px; font-size: 12px;}
@@ -139,11 +140,12 @@ form #password::placeholder, form #email::placeholder {padding: 5px; font-size: 
 .carrousel-section { margin: 20px auto; }
 .carousel-item img { border-radius: 10px; }
 
-.content-iphone { display: flex; justify-content: space-around; padding: 20px; }
+.content-iphone { display: flex; justify-content: space-around; padding: 20px; flex-wrap: wrap; }
 .content-iphone .card .card-title { font-size: 1rem; }
 .content-iphone .card img { height: 70%; }
-.content-iphone .card:hover { cursor: pointer; box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.481);}
+.content-iphone .card:hover { cursor: pointer; box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.481); }
 .card-body {  display: flex; flex-direction: column; justify-content: space-between; }
+
 .card-price { font-size: 1rem; font-weight: 400; }
 .card-text {  font-size: .8rem; margin-bottom: 5px;}
 

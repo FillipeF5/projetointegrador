@@ -55,13 +55,13 @@
                     <!-- polegadas -->
                     <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">Tela</span>
-                        <input type="text" value="<%= produto.polegadas %>" name="polegadas" class="form-control" placeholder="tela" aria-label="tela" aria-describedby="basic-addon1">
+                        <input type="text" value="<%= produto.polegadas %>" name="polegadas" class="form-control" placeholder="tela" aria-label="tela" aria-describedby="basic-addon1" required>
                     </div>
                     <!-- os -->
                     <div class="input-group mb-3">
                         <label class="input-group-text" for="inputGroupSelect01">O.S</label>
-                        <select class="form-select" value="<%= produto.os %>" name="os" id="inputGroupSelect01">
-                        <option selected value="<%= produto.os %>">-</option>
+                        <select name="os" class="form-select" id="inputGroupSelect01" required>
+                        <option selected disabled></option>
                         <option value="iOS">iOS</option>
                         <option value="Android">Android</option>
                         <option value="Outro">Outro (descreva na box de "outras informações)"</option>
@@ -73,18 +73,18 @@
                         <input type="text" value="<%= produto.memoriasd %>" name="memoriasd" class="form-control" placeholder="memoria" aria-label="memoria sd" aria-describedby="basic-addon1">
                     </div>
                     <!-- waterproof -->
-                    <div class="input-group mb-2">
+                    <div class="input-group mb-3">
                         <label class="input-group-text" for="inputGroupSelect01">A prova d'agua?</label>
-                        <select name="waterproof" value="<%= produto.waterproof %>" class="form-select" id="inputGroupSelect01">
-                        <option selected value="<%= produto.waterproof %>">-</option>
+                        <select name="waterproof" value="<%= produto.waterproof %>" class="form-select" id="inputGroupSelect01" required>
+                        <option selected disabled></option>
                         <option value="Sim">Sim</option>
                         <option value="Não">Não</option>
                         </select>
                     </div>
                 
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
                         <button type="submit" class="btn btn-primary">Salvar</button>
+                        <a class="btn btn-primary" role="button" href="/dashboard/produtos">Fechar</a>
                     </div>
                 </form>
 

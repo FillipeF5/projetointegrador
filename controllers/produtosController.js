@@ -17,17 +17,13 @@ const ControlladorProdutos = {
         fs.writeFileSync(__dirname + '/../models/produtos.json' , JSON.stringify(modelProdutos));
         res.redirect('/dashboard/produtos');
     },
-
-    // destroy: (req,res) => {
-    //     res.redirect('/dashboard/produtos');
-    // },
     
     edit: (req,res) => {
         let { id } = req.params;
-        
+
         //metodo find percorre o json modelProdutos e localiza o item(produto) onde o id desse produto(produto.id) é identico ao id requisitado na params
         const produto = modelProdutos.find(produto => produto.id == id);
-
+        console.log(produto.os);
         res.render('editar', { produto });
     },
 
@@ -44,11 +40,22 @@ const ControlladorProdutos = {
         produto.os = os;
         produto.memoriasd = memoriasd;
         produto.waterproof = waterproof;
+        
         //reescrevendo-reenviando ao arquivo json os novos dados
         fs.writeFileSync(__dirname + '/../models/produtos.json' , JSON.stringify(modelProdutos));
-
+        console.log(os);
         res.redirect('/dashboard/produtos');
     },
+
+    destroy: (req, res) => {
+        let { id } = req.params;
+
+        const produto = modelProdutos.findIndex((produto) => produto.id === id);
+        
+        modelProdutos.splice(produto, 1);
+
+        res.render('deleted');
+    }
 };
 
 module.exports = ControlladorProdutos;

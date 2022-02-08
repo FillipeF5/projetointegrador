@@ -10,7 +10,11 @@ router.get('/', controlladorDashboard.index);
 router.get('/produtos', ControlladorProdutos.index);
 router.get('/clientes', ControlladorClientes.index);
 router.post('/produtos/create', ControlladorProdutos.create);
+
 router.get('/produtos/:id/editar', ControlladorProdutos.edit);
 router.put('/produtos/:id/editar', ControlladorProdutos.update);
+
+router.get('/produtos/:id/deletar', ControlladorProdutos.destroy);
+
 
 module.exports = router;
