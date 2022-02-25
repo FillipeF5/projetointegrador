@@ -4,6 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const methodOverride = require("method-override");
+const session = require('express-session');
 
 const indexRouter = require('./routes/index');
 const dashboardRouter = require('./routes/dashboard');
@@ -24,6 +25,12 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride('_method'));
+app.use(session({  
+  secret: 's3cur3',
+  resave: false, // a session deve ser salva em todas requisições ?
+  saveUninitialized: false, // mesmo usuários anônimos devem ter sessão salva ?
+  cookie: { maxAge: 30 * 60 * 1000, secure: true } //30min
+}));
 
 
 app.use('/', indexRouter);

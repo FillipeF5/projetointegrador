@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+  <%- include('./partials/head') %> 
+
+<body>
+  <%- include('./partials/header')  %> 
+
+    <div class="box-pgto">
+
+      <div class="box-pgto-esq">
+        <a class="logo" href="index.html"> <img src="/images/logo.gif" alt="logo" width="110"></a>
+      </div>
+
+      <div class="box-pgto-dir">
+        <form action="" method="POST" >
+
+          <h3>Pagamento</h3>
+          <div class="form-floating" id="forma-pgto">
+            <select name="pagamento" class="form-select" id="floatingPagamento" >
+              <option selected disabled></option>
+              <option value="credito">Cartão de Crédito</option>
+              <option value="boleto">Boleto</option>
+            </select>
+            <label for="floatingPagamento">Forma de pagamento</label>
+          </div>
+    
+    
+          <div class="form-floating">
+            <input type="number" name="cardnumber" class="form-control" id="floatingCard" value="">
+            <label for="floatingCard">numero do cartão</label>
+          </div>
+          
+          <div class="row g-2">
+
+            <div class="col-md">
+              <div class="form-floating">
+                <input type="text" name="validade" id="floatingValidade" class="form-control" value="">
+                <label for="floatingValidade">validade</label>
+              </div>
+            </div>
+                  
+            <div class="col-md">
+              <div class="form-floating">
+                <input type="number" name="cvv" class="form-control" id="floatingCvv">
+                <label for="floatingCvv">CVV</label>
+              </div>
+            </div>
+
+          </div>
+    
+          <div class="form-floating">
+            <input type="number" name="cpf" class="form-control" id="floatingCpf">
+            <label for="floatingCpf">CPF</label>
+          </div>
+    
+          <div class="form-floating">
+            <input type="text" name="nome" class="form-control" id="floatingName">
+            <label for="floatingName">Nome</label>
+          </div>
+    
+          <div class="form-floating">
+            <select name="parcelamento" class="form-select" id="floatingParcelamento" value="">
+              <option selected disabled></option>
+              <option value="credito">1x</option>
+              <option value="boleto">2x</option>
+              <option value="boleto">3x</option>
+            </select>
+            <label for="floatingParcelamento">Parcelamento</label>
+          </div>
+
+          <div class="row g-2">
+            <div class="col-md">
+              <button type="submit" class="btn btn-primary">Voltar</button>
+            </div>
+            <div class="col-md">
+              <button type="submit" class="btn btn-primary">Próximo</button>
+            </div>
+          </div>
+          
+        </form>
+      </div>
+
+    </div>
+  
+
+  <%- include('./partials/footer') %>
+
+</body>
+</html>

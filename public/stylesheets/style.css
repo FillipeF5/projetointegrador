@@ -188,3 +188,22 @@ form #password::placeholder, form #email::placeholder {padding: 5px; font-size: 
 .btn-delete { color: red; font-weight: bold;}
 .btn-edit:hover, .btn-view:hover { cursor: pointer; background-color: rgba(133, 133, 133, 0.33);}
 .btn-delete:hover { cursor: pointer; background-color: rgba(255, 0, 0, 0.652); color: black; }
+
+
+
+/* FORMULARIO NOVO CLIENTE */
+.body-register {display:flex; flex-direction: column;}
+.header-form-register { margin: 10px auto }
+.header-form-register .logo img {border-radius: 20px; margin: 5px;}
+#form-register { padding: 15px; background-color: rgba(255, 210, 255, 0.28); width: 60%; margin: 0 auto; border-radius: 10px;}
+#form-register input, label, select.form-select, button.btn-primary { margin: 8px auto; }
+#form-register button.btn-primary {background-color: #3A2E8A;}
+#form-register .space { border-top: 1px solid grey; margin-top: 20px;}
+#form-register span {  margin: 25px auto;}
+
+
+/* BOX PGTO */
+.box-pgto {display: flex; width: 60%; margin: 20px auto;  box-shadow: 1px 1px 8px black; border-radius: 10px;}
+.box-pgto-esq {background-color: #3A2E8A; opacity: 60%; width: 40%;}
+.box-pgto-dir { width: 60%; margin: 5px;}
+#forma-pgto { border-bottom: 2px solid grey; margin: 5px 0;}
