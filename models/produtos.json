@@ -1,1 +1,54 @@
-[{"id":"4b6b8e81-5855-4007-926b-7e39b6e3c808","imagem":"/images/iphone-13-rose.jpg","title":"Apple iPhone 13 Pro","color":"Rose","price":"14.899","os":"iOS","memoriasd":"256","waterproof":"Sim","polegadas":"6,6"},{"id":"eac3007d-99fb-47fd-a230-e939b9a8453c","imagem":"/images/iphone-13-pro-blue.png","title":"Apple iPhone 12","color":"Blue","price":"6879","polegadas":"6,2","os":"iOS","memoriasd":"128","waterproof":"Sim"},{"id":"d2cb2824-ab41-4ae3-b355-da275b1ae766","title":"Apple iPhone XR","color":"Black","price":"6879","polegadas":"6,2","os":"iOS","memoriasd":"128","waterproof":"Sim"},{"id":"ea255995-8f30-45fe-b623-70fbda1be114","title":"LG K10","color":"Prata","price":"899","polegadas":"5,2","os":"Android","memoriasd":"32","waterproof":"Não"},{"id":"b6a56bda-a3d3-4d77-9ea2-ab188ea52a74","title":"Asus ZenFone Maxx","color":"Silver","price":"999","polegadas":"5,8","os":"Android","memoriasd":"64","waterproof":"Sim"}]
+[
+    {
+        "id": "4b6b8e81-5855-4007-926b-7e39b6e3c808",
+        "imagem": "/images/iphone-13-rose.jpg",
+        "title": "Apple iPhone 13 Pro",
+        "color": "Rose",
+        "price": "14.899",
+        "os": "iOS",
+        "memoriasd": "256",
+        "waterproof": "Sim",
+        "polegadas": "6,6"
+    },
+    {
+        "id": "eac3007d-99fb-47fd-a230-e939b9a8453c",
+        "imagem": "/images/iphone-13-pro-blue.png",
+        "title": "Apple iPhone 12",
+        "color": "Blue",
+        "price": "6879",
+        "polegadas": "6,2",
+        "os": "iOS",
+        "memoriasd": "128",
+        "waterproof": "Sim"
+    },
+    {
+        "id": "d2cb2824-ab41-4ae3-b355-da275b1ae766",
+        "title": "Apple iPhone XR",
+        "color": "Black",
+        "price": "6879",
+        "polegadas": "6,2",
+        "os": "iOS",
+        "memoriasd": "128",
+        "waterproof": "Sim"
+    },
+    {
+        "id": "ea255995-8f30-45fe-b623-70fbda1be114",
+        "title": "LG K10",
+        "color": "Prata",
+        "price": "899",
+        "polegadas": "5,2",
+        "os": "Android",
+        "memoriasd": "32",
+        "waterproof": "Não"
+    },
+    {
+        "id": "b6a56bda-a3d3-4d77-9ea2-ab188ea52a74",
+        "title": "Asus ZenFone Maxx",
+        "color": "Silver",
+        "price": "999",
+        "polegadas": "5,8",
+        "os": "Android",
+        "memoriasd": "64",
+        "waterproof": "Sim"
+    }
+]

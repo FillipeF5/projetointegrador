@@ -5,7 +5,10 @@ const fs = require('fs');
 
 const ControlladorProdutos = {
     index: (req, res) => {
-        res.render('produtos', { produtos: modelProdutos });
+        let { id } = req.params;
+        const produto = modelProdutos.find(produto => produto.id == id)
+
+        res.render('produtos', { produto });
     },
 
     create: (req, res) => {
@@ -23,7 +26,7 @@ const ControlladorProdutos = {
 
         //metodo find percorre o json modelProdutos e localiza o item(produto) onde o id desse produto(produto.id) é identico ao id requisitado na params
         const produto = modelProdutos.find(produto => produto.id == id);
-        console.log(produto.os);
+        
         res.render('editar', { produto });
     },
 
@@ -55,6 +58,12 @@ const ControlladorProdutos = {
         modelProdutos.splice(produto, 1);
 
         res.render('deleted');
+    },
+
+    show: (req, res) => {
+        let { id } = req.params;
+        const produto = modelProdutos.find(produto => produto.id == id)
+        res.render('detalheProduto', { produto });
     }
 };
 

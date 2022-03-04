@@ -4,5 +4,6 @@ const ControlladorProdutos = require('../controllers/produtosController');
 
 
 router.get('/', ControlladorProdutos.index)
+router.get('/produtos/:id', ControlladorProdutos.show)
 
 module.exports = router;

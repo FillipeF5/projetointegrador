@@ -8,23 +8,27 @@
 
     <main id="login">
         
-        <div class="container">
+        <div class="container-lg">
             
             <div class="conteudo">
 
-                <h1>Seja bem vindo (a)</h1>
+                <h1 class="h3 mb-3 fw-normal">Seja bem vindo (a)</h1>
         
                 <div class="box-login">
 
-                    <a class="logo" href="index.html"> <img src="/images/logo.gif" alt="logo" width="100">  </a>
+                    <a class="logo" href="index.html"> <img src="/images/logo.gif" alt="logo" width="100"> </a>
                     <form>
-                        <label for="email">Email</label>
-                        <input type="email" id="email" placeholder="digite seu email">
+                        <div class="form-floating">
+                            <input type="email" id="floatEmail" class="form-control" placeholder="digite seu email">
+                            <label for="floatEmail">Email</label>
+                        </div>
+                        <div class="form-floating">
+                            <input type="password" id="floatPassword" class="form-control" placeholder="digite sua senha">
+                            <label for="floatPassword">Senha</label>
+                        </div>
+                                                
 
-                        <label for="password">Senha</label>
-                        <input type="password" id="password" placeholder="digite sua senha">
-
-                        <button class="btn-login">Entrar</button>
+                        <button class="btn-login" type="submit">Entrar</button>
                         <button class="btn-google">Acessar com Google <img class="icon-google" src="/images/google_icon-icons.com_62736.svg"></button>
                         <button><a href="/login/register">Registre-se</a></button>
 
