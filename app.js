@@ -11,7 +11,7 @@ const dashboardRouter = require('./routes/dashboard');
 const clientesRouter = require('./routes/clientes');
 const loginRouter = require('./routes/login');
 const produtosRouter = require('./routes/produtos');
-
+const carrinhoRouter = require('./routes/carrinho');
 
 const app = express();
 
@@ -38,6 +38,7 @@ app.use('/dashboard', dashboardRouter);
 app.use('/clientes', clientesRouter);
 app.use('/login', loginRouter);
 app.use('/produtos', produtosRouter);
+// app.use('/carrinho', carrinhoRouter);
 
 
 // catch 404 and forward to error handler

@@ -1,11 +1,8 @@
-const modelCarrinho = require('../models/carrinho.json');
-const modelProdutos = require('../models/produtos.json');
 
-const ControlladorCarrinho = {
-    create: (req, res) => {
-        
-
-    }
+const controlladorCarrinho = {
+    show: (req, res) => {
+        res.render('carrinho');
+    },
 };
 
-module.exports = ControlladorCarrinho;
+module.exports = controlladorCarrinho;
