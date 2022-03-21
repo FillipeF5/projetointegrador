@@ -1,6 +1,6 @@
-const express = require('express');
-const router = express.Router();
-const ControlladorClientes = require('../controllers/clientesController');
+const { Router } = require('express');
+const router = Router();
+const ControlladorClientes = require('../controllers/ClienteController.js');
 
 
 /* GET clients listing. */
