@@ -6,7 +6,7 @@ const { Produto } = require('../database/models');
 const ControlladorProdutos = {
     index: async (req, res) => {
         let { id } = req.params;
-        const produtos =  await Produto.findAll();
+        const produtos = await Produto.findAll();
 
         return res.render('produtos', { produtos });
     },
@@ -16,7 +16,7 @@ const ControlladorProdutos = {
     store: async (req, res) => {
         const { title, color, price, tela, os, memoria, waterproof } = req.body;
         const produto = await Produto.create({
-            title, 
+            title,
             color,
             price,
             tela,
@@ -26,18 +26,32 @@ const ControlladorProdutos = {
         });
         return res.redirect('/dashboard/produtos')
     },
-    edit: async (req,res) => {
-        let { id } = req.params;
-
+    edit: async (req, res) => {
+        const { id } = req.params;
         const produto = await Produto.findByPk(id);
+
+        res.render('editar',  { produto })
+    },
+    update: async (req, res) => {
+        const { id } = req.params;
+        const { title, color, price, tela, os, memoria, waterproof } = req.body;
         
-        return res.render('editar', { produto });
+        await Produto.update({ 
+            title: title,
+            color: color, 
+            price: price, 
+            tela: tela,
+            os: os,
+            memoria: memoria, 
+            waterproof: waterproof }, { where: { id: id } });
+
+        return res.redirect('editar');
     },
     delete: async (req, res) => {
         let { id } = req.params;
 
         const produto = await Produto.findByPk(id);
-        
+
         produto.destroy();
 
         return res.render('deleted');

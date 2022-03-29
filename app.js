@@ -11,7 +11,7 @@ const dashboardRouter = require('./routes/dashboard');
 const clientesRouter = require('./routes/clientes');
 const loginRouter = require('./routes/login');
 const produtosRouter = require('./routes/produtos');
-const carrinhoRouter = require('./routes/carrinho');
+// const carrinhoRouter = require('./routes/carrinho');
 
 const app = express();
 

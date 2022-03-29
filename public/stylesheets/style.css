@@ -172,10 +172,24 @@ form button:hover {background-color: #577ec75d; transition: .5s ease-in-out; cur
 
 
 /* BOX PGTO */
-.box-pgto {display: flex; width: 60%; margin: 20px auto;  box-shadow: 1px 1px 8px black; border-radius: 10px;}
-.box-pgto-esq {background-color: #3A2E8A; opacity: 60%; width: 40%;}
-.box-pgto-dir { width: 60%; margin: 5px;}
+#box-pgto {display: flex; width: 60%; margin: 20px auto;  box-shadow: 1px 1px 8px black; border-radius: 10px;}
+#box-pgto-esq {background-color: #3A2E8A; opacity: 60%; width: 40%;}
+#box-pgto-dir { width: 60%; margin: 5px;}
 #forma-pgto { border-bottom: 2px solid grey; margin: 5px 0;}
+
+@media screen and (max-width: 768px) {
+    #box-pgto-esq {
+        display: none;
+    }
+    #box-pgto-dir #forma-pgto {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 1000px) {
+    #price-details #qtd label {
+        font-size: 12px;
+    }
+}
 
 
 

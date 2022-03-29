@@ -6,20 +6,20 @@
 <body>
   <%- include('./partials/header')  %> 
 
-    <div class="box-pgto">
+    <div id="box-pgto" class="container">
 
-      <div class="box-pgto-esq">
+      <div id="box-pgto-esq" class="container-sm">
         <a class="logo" href="index.html"> <img src="/images/logo.gif" alt="logo" width="110"></a>
       </div>
 
-      <div class="box-pgto-dir">
-        <form action="" method="POST" >
+      <div id="box-pgto-dir" class="container">
+        <form action="" method="POST">
 
           <h3>Pagamento</h3>
           <div class="form-floating" id="forma-pgto">
             <select name="pagamento" class="form-select" id="floatingPagamento" >
-              <option selected disabled></option>
-              <option value="credito">Cartão de Crédito</option>
+              
+              <option selected value="credito">Cartão de Crédito</option>
               <option value="boleto">Boleto</option>
             </select>
             <label for="floatingPagamento">Forma de pagamento</label>

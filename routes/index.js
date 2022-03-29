@@ -1,7 +1,8 @@
 var express = require('express');
+var router = express.Router();
 const ControlladorHome = require('../controllers/index.Controller');
 const ControlladorProdutos = require('../controllers/produtosController');
-var router = express.Router();
+
 
 /* GET home page. */
 router.get('/', ControlladorHome.index);

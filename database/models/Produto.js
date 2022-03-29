@@ -19,7 +19,7 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false
         },
         "tela": {
-            type: DataTypes.DECIMAL,
+            type: DataTypes.DECIMAL(2,1),
             allowNull: false
         },
         "os": {
