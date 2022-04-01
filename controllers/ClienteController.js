@@ -13,6 +13,7 @@ const ControlladorClientes = {
     create: (req, res) => {
         // const { nome, email, nascimento, genero, password, passwordConfirm  } = req.body;
 
+        
                         
         // const users = { id: uuid(), nome, email, nascimento, genero, password: bcrypt.hashSync(password, 10) };
 

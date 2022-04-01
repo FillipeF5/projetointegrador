@@ -21,7 +21,7 @@ module.exports = (sequelize, DataTypes) => {
         "genero": {
             type: DataTypes.STRING,
             allowNull: false
-        },
+        }
     }, {
         "tableName": "cliente",
         "timestamps": false

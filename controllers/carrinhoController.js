@@ -1,4 +1,4 @@
-const { Carrinho, Produto } = require('../database/models');
+const { Carrinho, Produto, Cliente } = require('../database/models');
 
 const controlladorCarrinho = {
     show: (req, res) => {
@@ -6,16 +6,16 @@ const controlladorCarrinho = {
 
         res.render('carrinho');
     },
-    create: (req, res) => {
-        
-    },
     store: async (req, res) => {
-        const { id  } = req.params;
+        const { id  } = req.session;   //buscar o id da sessao e usuario
 
-        const carrinho = await Carrinho.create({
-            id
+        const carrinho = await Carrinho.findOne({
+            where: { cliente_id:id }            //carrinho cujo id do cliente é == id usuario sessao
         });
-        return res.render('/carrinho')
+        let idProduto = req.params.id;
+        await carrinho.addCartItem({ produto_id:idProduto, quantidade:0})   //idProduto: id req params
+
+        return res.redirect('/carrinho', { carrinho })
     }
 };
 
