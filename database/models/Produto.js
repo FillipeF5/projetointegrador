@@ -6,16 +6,16 @@ module.exports = (sequelize, DataTypes) => {
             autoIncrement: true,
             allowNull: false
         },
-        "title": {
+        "titulo": {
             type: DataTypes.STRING,
             allowNull: false
         },
-        "color": {
+        "cor": {
             type: DataTypes.STRING,
             allowNull: false
         },
-        "price": {
-            type: DataTypes.INTEGER,
+        "preco": {
+            type: DataTypes.DECIMAL(5,3),
             allowNull: false
         },
         "tela": {
@@ -30,11 +30,11 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.INTEGER,
             allowNull: false
         },
-        "waterproof": {
+        "provadagua": {
             type: DataTypes.STRING,
             allowNull: false
         },
-        "description": {
+        "descricao": {
             type: DataTypes.STRING,
             allowNull: true
         },

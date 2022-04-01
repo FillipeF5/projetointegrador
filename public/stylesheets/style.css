@@ -109,10 +109,10 @@ form button:hover {background-color: #577ec75d; transition: .5s ease-in-out; cur
 .carrousel-section { margin: 20px auto; }
 .carousel-item img { border-radius: 10px; }
 
-.content-iphone { display: flex; justify-content: space-around; padding: 20px; flex-wrap: wrap; }
-.content-iphone .card .card-title { font-size: 1rem; }
-.content-iphone .card img { height: 70%; }
-.content-iphone .card:hover { cursor: pointer; box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.481); }
+.conteudo-cards { display: flex; justify-content: space-around; padding: 20px; flex-wrap: wrap; }
+.conteudo-cards .card .card-title { font-size: 1rem; }
+.conteudo-cards .card img { height: 70%; }
+.conteudo-cards .card:hover { cursor: pointer; box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.481); }
 .card-body {  display: flex; flex-direction: column; justify-content: space-between; }
 
 .card-price { font-size: 1rem; font-weight: 400; }

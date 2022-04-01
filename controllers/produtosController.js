@@ -1,7 +1,4 @@
 const { Produto } = require('../database/models');
-// const { uuid } = require('uuidv4');
-// const fs = require('fs');
-
 
 const ControlladorProdutos = {
     index: async (req, res) => {
@@ -14,15 +11,15 @@ const ControlladorProdutos = {
         res.redirect('/dashboard/produtos');
     },
     store: async (req, res) => {
-        const { title, color, price, tela, os, memoria, waterproof } = req.body;
+        const { titulo, cor, preco, tela, os, memoria, provadagua } = req.body;
         const produto = await Produto.create({
-            title,
-            color,
-            price,
+            titulo,
+            cor,
+            preco,
             tela,
             os,
             memoria,
-            waterproof
+            provadagua
         });
         return res.redirect('/dashboard/produtos')
     },
@@ -34,16 +31,16 @@ const ControlladorProdutos = {
     },
     update: async (req, res) => {
         const { id } = req.params;
-        const { title, color, price, tela, os, memoria, waterproof } = req.body;
+        const { titulo, cor, preco, tela, os, memoria, provadagua } = req.body;
         
         await Produto.update({ 
-            title: title,
-            color: color, 
-            price: price, 
+            titulo: title,
+            cor: cor, 
+            preco: preco, 
             tela: tela,
             os: os,
             memoria: memoria, 
-            waterproof: waterproof }, { where: { id: id } });
+            provadagua: provadagua }, { where: { id: id } });
 
         return res.redirect('editar');
     },

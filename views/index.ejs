@@ -41,16 +41,16 @@
 
         <section class="card-section">
               
-          <div class="content-iphone">
+          <div class="conteudo-cards">
             
             <% produtos.forEach(produto => { %>
               <div class="card" style="width: 17rem;">
                 <img src="" class="card-img-top" alt=""/>
                 <div class="card-body">
-                     <h5 class="card-title">  <%= produto.title %> - <%= produto.color %> </h5>
-                      <p class="card-price">R$ <%= produto.price %>,00</p>
+                     <h5 class="card-title">  <%= produto.titulo %> - <%= produto.cor %> </h5>
+                      <p class="card-price">R$ <%= produto.preco %>,00</p>
                         <div class="card-text">
-                            <p><%= produto.os %> · Tela de <%= produto.tela %> · <%= produto.memoria %> · Resistente à agua</p>
+                            <p><%= produto.os %> · Tela de <%= produto.tela %> polegadas · <%= produto.memoria %> GB </p>
                         </div>
                         <a href="/produto/<%= produto.id %>" class="btn btn-primary">Ver produto</a>
                 </div>

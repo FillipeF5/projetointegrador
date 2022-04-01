@@ -11,15 +11,15 @@ module.exports = {
                 autoIncrement: true,
                 allowNull: false
             },
-            "title": {
+            "titulo": {
                 type: Sequelize.STRING,
                 allowNull: false
             },
-            "color": {
+            "cor": {
                 type: Sequelize.STRING,
                 allowNull: false
             },
-            "price": {
+            "preco": {
                 type: Sequelize.INTEGER,
                 allowNull: false
             },
@@ -35,11 +35,11 @@ module.exports = {
                 type: Sequelize.INTEGER,
                 allowNull: false
             },
-            "waterproof": {
+            "provadagua": {
                 type: Sequelize.STRING,
                 allowNull: false
             },
-            "description": {
+            "descricao": {
                 type: Sequelize.STRING,
                 allowNull: true
             },

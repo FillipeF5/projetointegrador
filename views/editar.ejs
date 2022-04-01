@@ -36,26 +36,26 @@
                 <h4>Editando produtos</h4>
                 
                 <form action="/dashboard/produtos/<%= produto.id %>/editar?_method=PUT" method="POST" >
-                    <!-- title -->
+                    <!-- titulo -->
                     <div class="input-group mb-3">
                         <span class="input-group-text" for="title" id="basic-addon1">Título</span>
-                        <input type="text" name="title" value="<%= produto.title %>" class="form-control" placeholder="titulo" aria-label="Titulo" aria-describedby="basic-addon1">
+                        <input type="text" name="titulo" value="<%= produto.titulo %>" class="form-control" placeholder="titulo" aria-label="Titulo" aria-describedby="basic-addon1">
                     </div>
-                    <!-- color -->
+                    <!-- cor -->
                     <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">Cor</span>
-                        <input type="text" name="color" value="<%= produto.color %>" class="form-control" placeholder="cor" aria-label="Cor" aria-describedby="basic-addon1">
+                        <input type="text" name="cor" value="<%= produto.cor %>" class="form-control" placeholder="cor" aria-label="Cor" aria-describedby="basic-addon1">
                     </div>
-                    <!-- price -->
+                    <!-- preco -->
                     <div class="input-group mb-3">
                         <span class="input-group-text">R$</span>
-                        <input type="text"value="<%= produto.price %>" name="price" class="form-control" placeholder="preço">
+                        <input type="text"value="<%= produto.preco %>" name="preco" class="form-control" placeholder="preço">
                         <span class="input-group-text">,00</span>
                     </div>
-                    <!-- polegadas -->
+                    <!-- tela -->
                     <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">Tela</span>
-                        <input type="text" value="<%= produto.tela %>" name="polegadas" class="form-control" placeholder="tela" aria-label="tela" aria-describedby="basic-addon1" required>
+                        <input type="text" value="<%= produto.tela %>" name="tela" class="form-control" placeholder="tela" aria-label="tela" aria-describedby="basic-addon1" required>
                     </div>
                     <!-- os -->
                     <div class="input-group mb-3">
@@ -67,15 +67,15 @@
                         <option value="Outro">Outro (descreva na box de "outras informações)"</option>
                         </select>
                     </div>
-                    <!-- memoriasd -->
+                    <!-- memoria -->
                     <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">Memoria</span>
-                        <input type="text" value="<%= produto.memoria %>" name="memoriasd" class="form-control" placeholder="memoria" aria-label="memoria sd" aria-describedby="basic-addon1">
+                        <input type="text" value="<%= produto.memoria %>" name="memoria" class="form-control" placeholder="memoria" aria-label="memoria sd" aria-describedby="basic-addon1">
                     </div>
-                    <!-- waterproof -->
+                    <!-- provadagua -->
                     <div class="input-group mb-3">
                         <label class="input-group-text" for="inputGroupSelect01">A prova d'agua?</label>
-                        <select name="waterproof" value="<%= produto.waterproof %>" class="form-select" id="inputGroupSelect01" required>
+                        <select name="provadagua" value="<%= produto.provadagua %>" class="form-select" id="inputGroupSelect01" required>
                         <option selected disabled></option>
                         <option value="Sim">Sim</option>
                         <option value="Não">Não</option>

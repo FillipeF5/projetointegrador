@@ -63,17 +63,17 @@
                                 <form action="/dashboard/produtos/create" method="POST" >
                                     <div class="input-group mb-3">
                                         <span class="input-group-text" for="title" id="basic-addon1">Título</span>
-                                        <input type="text" name="title" class="form-control" placeholder="titulo" aria-label="Titulo" aria-describedby="basic-addon1">
+                                        <input type="text" name="titulo" class="form-control" placeholder="titulo" aria-label="Titulo" aria-describedby="basic-addon1">
                                     </div>
                                     
                                     <div class="input-group mb-3">
                                         <span class="input-group-text" id="basic-addon1">Cor</span>
-                                        <input type="text" name="color" class="form-control" placeholder="cor" aria-label="Cor" aria-describedby="basic-addon1">
+                                        <input type="text" name="cor" class="form-control" placeholder="cor" aria-label="Cor" aria-describedby="basic-addon1">
                                     </div>
 
                                     <div class="input-group mb-3">
                                         <span class="input-group-text">R$</span>
-                                        <input type="text" name="price" class="form-control" placeholder="preço">
+                                        <input type="text" name="preco" class="form-control" placeholder="preço">
                                         <span class="input-group-text">,00</span>
                                     </div>
 
@@ -99,7 +99,7 @@
 
                                     <div class="input-group mb-2">
                                         <label class="input-group-text" for="inputGroupSelect01">A prova d'agua?</label>
-                                        <select name="waterproof" class="form-select" id="inputGroupSelect01">
+                                        <select name="provadagua" class="form-select" id="inputGroupSelect01">
                                         <option selected>-</option>
                                         <option value="Sim">Sim</option>
                                         <option value="Não">Não</option>
@@ -139,13 +139,13 @@
                             <% produtos.forEach(produto => { %>
                                 <tr>
                                     <th scope="row"> <%= produto.id %> </th>
-                                    <td> <%= produto.title %>  </td>
-                                    <td> <%= produto.color %>  </td>
-                                    <td> <%= produto.price %>,00 </td>
+                                    <td> <%= produto.titulo %>  </td>
+                                    <td> <%= produto.cor %>  </td>
+                                    <td> <%= produto.preco %>,00 </td>
                                     <td> <%= produto.tela %> </td>
                                     <td> <%= produto.os %> </td>
                                     <td> <%= produto.memoria %> GB</td>
-                                    <td> <%= produto.waterproof %> </td>
+                                    <td> <%= produto.provadagua %> </td>
                                     <td>
                                         <div class="btn-edit" title="editar">
                                             <a href="/dashboard/produtos/<%= produto.id  %>/editar">
