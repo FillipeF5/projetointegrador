@@ -1,3 +1,4 @@
+const { v4: uuid } = require('uuidv4');
 const { Produto } = require('../database/models');
 
 const ControlladorProdutos = {
@@ -11,9 +12,11 @@ const ControlladorProdutos = {
         res.redirect('/dashboard/produtos');
     },
     store: async (req, res) => {
-        const { titulo, cor, preco, tela, os, memoria, provadagua } = req.body;
+        
+        const { titulo, descricao, cor, preco, tela, os, memoria, provadagua } = req.body;
         const produto = await Produto.create({
             titulo,
+            descricao,
             cor,
             preco,
             tela,
@@ -27,20 +30,22 @@ const ControlladorProdutos = {
         const { id } = req.params;
         const produto = await Produto.findByPk(id);
 
-        res.render('editar',  { produto })
+        res.render({ produto }, 'editar')
     },
     update: async (req, res) => {
         const { id } = req.params;
-        const { titulo, cor, preco, tela, os, memoria, provadagua } = req.body;
+        const { titulo, cor, preco, tela, os, memoria, descricao, provadagua } = req.body;
         
         await Produto.update({ 
-            titulo: title,
+            titulo: titulo,
             cor: cor, 
             preco: preco, 
             tela: tela,
             os: os,
-            memoria: memoria, 
-            provadagua: provadagua }, { where: { id: id } });
+            memoria: memoria,
+            descricao: descricao,
+            provadagua: provadagua }, 
+            { where: { id: id } });
 
         return res.redirect('editar');
     },
@@ -53,11 +58,16 @@ const ControlladorProdutos = {
 
         return res.render('deleted');
     },
-    show: async (req, res) => {
+    showOne: async (req, res) => {
         let { id } = req.params;
         const produto = await Produto.findByPk(id)
         return res.render('detalheProduto', { produto });
-    }
+    },
+    showAll: async (req, res) => {
+        const produtos = await Produto.findAll();
+
+        return res.render('celulares', { produtos });
+    },
 };
 
 module.exports = ControlladorProdutos;

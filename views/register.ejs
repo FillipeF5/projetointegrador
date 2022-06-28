@@ -1,71 +1,85 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-  <%- include('./partials/head') %> 
+<%- include('./partials/head') %>
 
-<body>
-  
+  <body>
 
-  <div class="body-register">
 
-    <div class="header-form-register">
-      <a class="logo" href="index.html"> <img src="/images/logo.gif" alt="logo" width="110"></a>
+    <div class="body-register">
+
+      <div class="header-form-register">
+        <a class="logo" href="index.html"> <img src="/images/logo.gif" alt="logo" width="110"></a>
+      </div>
+
+      <% if (typeof erro !=='undefined' ) { %>
+        <h1>
+          <%= erro %>
+        </h1>
+        <% } %>
+
+          <form class="form-register" action="/login/register" enctype="multipart/form-data" method="POST">
+
+            <h3>Crie sua conta, é gratis</h3>
+
+            <div class="form-floating">
+              <input type="text" name="nome" class="form-control" id="floatingName" value="">
+              <label for="floatingName">Nome</label>
+            </div>
+
+            <div class="form-floating">
+              <input type="text" name="sobrenome" class="form-control" id="floatingSobrenome" value="">
+              <label for="floatingSobrenome">Sobrenome</label>
+            </div>
+
+            <div class="form-floating">
+              <input type="email" name="email" id="floatingEmail" class="form-control" value="">
+              <label for="floatingEmail">Email</label>
+            </div>
+
+            <div class="form-floating">
+              <input type="date" name="nascimento" id="floatingDate" class="form-control" value="">
+              <label for="floatingDate">Nascimento</label>
+            </div>
+
+            <div class="form-floating">
+              <select name="genero" class="form-select" id="floatingGenero" value="">
+                <option selected disabled></option>
+                <option value="F">Fem</option>
+                <option value="M">Mas</option>
+                <option value="outro">Outro</option>
+                <option value="noanswer">Prefiro não responder</option>
+              </select>
+              <label for="floatingGenero">Gênero</label>
+            </div>
+
+            <div class="input-group mb-3">
+              <label class="input-group-text" for="avatar">Foto perfil</label>
+              <input type="file" class="form-control" id="avatar" name="avatar">
+            </div>
+
+            <div class="form-floating">
+              <input type="password" name="password" class="form-control" id="floatingPassword" value="">
+              <label for="floatingPassword">Digite uma senha</label>
+            </div>
+
+            <div class="form-floating">
+              <input type="password" name="passwordConfirm" class="form-control" id="floatingConfirm" value="">
+              <label for="floatingConfirm">Confirme sua senha</label>
+            </div>
+
+
+            <button type="submit" class="btn btn-primary">Cadastre-se</button>
+
+            <div class="space"></div>
+            <span>Já tem uma conta? <a href="/login">Entrar</a></span>
+
+          </form>
+
     </div>
-    
-    <% if (typeof erro !== 'undefined') { %>
-      <h> <%= erro %> </h1>
-    <% } %>
 
-    <form id="form-register" action="/login/register" method="POST" >
+    <%- include('./partials/footer') %>
 
-      <h3>Crie sua conta, é gratis</h3>
-      <div class="form-floating">
-        <input type="text" name="nome" class="form-control" id="floatingName" value="">
-        <label for="floatingName">Nome</label>
-      </div>
-      
-      <div class="form-floating">
-        <input type="email" name="email" id="floatingEmail" class="form-control" value="">
-        <label for="floatingEmail">Email</label>
-      </div>
-      
-      <div class="form-floating">
-        <input type="date" name="nascimento" id="floatingDate" class="form-control" value="">
-        <label for="floatingDate">Nascimento</label>
-      </div>
+  </body>
 
-      <div class="form-floating">
-        <select name="genero" class="form-select" id="floatingGenero" value="">
-          <option selected disabled></option>
-          <option value="F">Fem</option>
-          <option value="M">Mas</option>
-          <option value="outro">Outro</option>
-          <option value="noanswer">Prefiro não responder</option>
-        </select>
-        <label for="floatingGenero">Gênero</label>
-      </div>
-      
-      <div class="form-floating">
-        <input type="password" name="password" class="form-control" id="floatingPassword" value="">
-        <label for="floatingPassword">Digite uma senha</label>
-      </div>
-
-      <div class="form-floating">
-        <input type="password" name="passwordConfirm" class="form-control" id="floatingPassword" value="">
-        <label for="floatingPassword">Confirme sua senha</label>
-      </div>
-
-      
-      <button type="submit" class="btn btn-primary">Cadastre-se</button>
-
-      <div class="space"></div>
-      <span>Já tem uma conta? <a href="/login">Entrar</a></span>
-      
-    </form>
-    
-  </div>
-
-  <%- include('./partials/footer') %>
-
-</body>
 </html>

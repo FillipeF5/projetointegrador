@@ -1,17 +1,18 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+// require('dotenv').config();
+
+const createError = require('http-errors');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
 const methodOverride = require("method-override");
 const session = require('express-session');
 
 const indexRouter = require('./routes/index');
 const dashboardRouter = require('./routes/dashboard');
-const clientesRouter = require('./routes/clientes');
+const usuariosRouter = require('./routes/usuarios');
 const loginRouter = require('./routes/login');
 const produtosRouter = require('./routes/produtos');
-// const carrinhoRouter = require('./routes/carrinho');
 
 const app = express();
 
@@ -27,7 +28,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride('_method'));
 app.use(session({  
   secret: 's3cur3',
-  resave: false, // a session deve ser salva em todas requisições ?
+  resave: true, // a session deve ser salva em todas requisições ?
   saveUninitialized: false, // mesmo usuários anônimos devem ter sessão salva ?
   cookie: { maxAge: 30 * 60 * 1000, secure: true } //30min
 }));
@@ -35,10 +36,9 @@ app.use(session({
 
 app.use('/', indexRouter);
 app.use('/dashboard', dashboardRouter);
-app.use('/clientes', clientesRouter);
+app.use('/usuarios', usuariosRouter);
 app.use('/login', loginRouter);
 app.use('/produtos', produtosRouter);
-// app.use('/carrinho', carrinhoRouter);
 
 
 // catch 404 and forward to error handler

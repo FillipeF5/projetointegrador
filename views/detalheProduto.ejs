@@ -1,102 +1,119 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  
-  <%- include('./partials/head') %> 
 
-<body>
-    <%- include('./partials/header')  %> 
-  
-    <main>
-        
-      <div class="container">
+<%- include('./partials/head') %>
 
-        <div id="product-title" class="container-sm">
-            <h2> <%= produto.titulo %>  <%= produto.cor %> - <%= produto.os %> 16 - Tela de <%= produto.tela %> polegadas </h2>
-        </div>
+  <body>
+    <%- include('./partials/header') %>
 
-        <div class="container-fluid" id="product-details">
-             
-            <div class="box-pics">
-                <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                      <div class="carousel-item active" data-bs-interval="10000">
-                        <img src="/images/iphone-13-pro-blue.png" class="d-block w-100">
-                      </div>
-                      <div class="carousel-item" data-bs-interval="2000">
-                        <img src="/images/iphone-13-pro-blue.png" class="d-block w-100" alt="...">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="/images/iphone-13-pro-blue.png" class="d-block w-100" alt="...">
-                      </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
-                    </button>
-                  </div>
+      <main>
 
-                <div id="box-description" class="container-md">
-                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam facere incidunt itaque praesentium. Praesentium itaque culpa quos mollitia quisquam quis voluptatum eos laboriosam officia. Ab alias obcaecati sint inventore enim?
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum itaque sequi totam eveniet, consequatur distinctio rem, corrupti porro facilis suscipit nisi voluptatem aliquid quae blanditiis dolorem incidunt iste repellat soluta. </p>
+        <div class="container" id="produto-detalhe">
+
+          <div id="box-foto-descricao" class="container-fluid">
+
+            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+
+              <div class="carousel-inner">
+
+                <div class="carousel-item active">
+                  <img src="<%= produto.imagem %>" class="d-block w-100">
                 </div>
+
+                <div class="carousel-item">
+                  <img src="<%= produto.imagem %>" class="d-block w-1000" alt="...">
+                </div>
+
+                <div class="carousel-item">
+                  <img src="<%= produto.imagem %>" class="d-block w-1000" alt="...">
+                </div>
+
+              </div>
+
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+
             </div>
 
+            <div id="box-descricao" class="container-md">
+              <p>
+                <%= produto.descricao %>
+              </p>
+            </div>
+          </div>
 
-            <div id="price-details" class="container-md">
-                <div class="price-title">
-                    <span>por</span><h3>R$ <%= produto.preco  %>,00  </h3>
-                    <span>ou em 10x de R$ 382,69 </span>
-                </div>
-                
-                
-                <form action="/produto/<%= produto.id %>/addcarrinho" method="POST">
-                  <div class="form-floating" id="qtd">
-                    <select name="quantidade" class="form-select" id="floatingQtd" value="">
-                      <option selected disabled></option>
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="5">5</option>
-                      <option value="6">6</option>
-                      <option value="7">7</option>
-                    </select>
-                    <label for="floatingQtd">selecione a quantidade desejada</label>
-                </div>
+          <div id="detalhe-preco" class="container-fluid">
 
-                <button type="submit">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
-                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-                    </svg>
-                    adicionar ao carrinho
+            <div id="titulo-produto">
+              <h5>
+                <%= produto.titulo %> -
+                  <%= produto.cor %> - <%= produto.os %> 16 - Tela de <%= produto.tela %> polegadas - Certificação
+                        ip68
+              </h5>
+            </div>
+
+            <div class="titulo-preco">
+              <span>por</span>
+              <h3>
+                <%= produto.preco %>
+              </h3>
+              <p>ou em 10x de R$ 382,69</p>
+            </div>
+
+            <div class="quantidade">
+              <form action="/produto/<%= produto.id %>/addcarrinho" method="POST" id="form-qntd">
+
+                <button type="submit" class="carrinho">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart"
+                    viewBox="0 0 16 16">
+                    <path
+                      d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                  </svg>
+                  adicionar ao carrinho
                 </button>
 
+              </form>
+            </div>
 
-                </form>
+            <div class="frete">
+              <p>consultar frete e prazo de entrega</p>
 
-                <div class="frete">
-                  <p>consultar frete e prazo de entrega</p>
-                  <div class="form-floating">
-                    <input type="number" id="floatingFrete" class="form-control" name="frete">
-                    <label for="floatingFrete">digite o CEP</label>
-                  </div>
-                  <a href="https://buscacepinter.correios.com.br/app/endereco/index.php" target="_blank">Não sei meu CEP</a>
+              <form action="">
+
+                <div class="form-floating">
+                  <input type="number" id="floatingFrete" class="form-control" name="frete" value="">
+                  <label for="floatingFrete">digite o CEP</label>
+
+                  <button type="submit">consultar</button>
                 </div>
 
+              </form>
+
+              <a href="https://buscacepinter.correios.com.br/app/endereco/index.php" target="_blank">Não sei meu
+                CEP</a>
             </div>
-            
+
+          </div>
+
         </div>
 
-      </div>
+      </main>
 
-    </main>
-    
-    <%- include('./partials/footer')  %> 
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-</body>
+      <%- include('./partials/footer') %>
+        <script src="/public/javascripts/cep.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+          </script>
+
+  </body>
+
 </html>

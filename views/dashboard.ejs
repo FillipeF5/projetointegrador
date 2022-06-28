@@ -1,39 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-    <%- include('./partials/head') %> 
-    
+<%- include('./partials/head') %>
 
-<body>
-    <header>
-        <div class="header-admin">
-            <div class="company-name">
+
+    <body>
+        <header>
+            <div class="header-admin">
                 <h5>DH Tech admin</h5>
             </div>
-            
-            <div class="admin-search-top">
-                <input type="search" placeholder="Search">
-            </div>
-        </div>
-    </header>
+        </header>
 
-    <main class="dashboard">
+        <main class="dashboard">
+            <%- include('./partials/nav-dashboard') %> 
+        </main>
+
         
-        <div class="nav-lateral">
+    </body>
 
-            <div class="links-lateral">
-                <ul>
-                    <li><a href="/dashboard">Home</a></li>
-                    <li><a href="/dashboard/clientes">Clients</a></li>
-                    <li><a href="/dashboard/produtos">Products</a></li>
-                </ul>
-            </div>
-        </div>
-
-
-
-    </main>
-
-    <!-- <%- include('./partials/footer') %>  -->
-</body>
 </html>

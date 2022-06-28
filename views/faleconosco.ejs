@@ -1,43 +1,45 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-  <%- include('./partials/head') %> 
+<%- include('./partials/head') %>
 
-<body>
-  <%- include('./partials/header')  %> 
+  <body>
+    <%- include('./partials/header') %>
 
-  <div class="body-register">
+      <div class="body-register">
 
-    <div class="header-form-register">
-      <a class="logo" href="index.html"> <img src="/images/logo.gif" alt="logo" width="110"></a>
-      
-    </div>
-    
-    <form  action="" method="POST" >
+        <div class="header-form-register">
+          <a class="logo" href="index.html"> <img src="/images/logo.gif" alt="logo" width="110"></a>
 
-      <h3>Fale conosco</h3>
-      <div class="form-floating">
-        <input type="text" name="nome" class="form-control" id="floatingName" >
-        <label for="floatingName">Nome</label>
+        </div>
+
+        <form class="form-register" action="" method="POST">
+
+          <h3>Fale conosco</h3>
+
+          <div class="form-floating">
+            <input type="text" name="nome" class="form-control" id="floatingName">
+            <label for="floatingName">Nome</label>
+          </div>
+
+          <div class="form-floating">
+            <input type="email" name="email" id="floatingEmail" class="form-control">
+            <label for="floatingEmail">Email</label>
+          </div>
+
+          <div class="form-floating">
+            <textarea type="text" name="message" class="form-control" id="floatingMessage"></textarea>
+            <label for="floatingMessage">Deixe aqui sua mensagem</label>
+          </div>
+
+          <button type="submit" class="btn btn-primary" value="enviar">Enviar</button>
+
+        </form>
+
       </div>
-      
-      <div class="form-floating">
-        <input type="email" name="email" id="floatingEmail" class="form-control" >
-        <label for="floatingEmail">Email</label>
-      </div>
-            
-      <div class="form-floating">
-        <textarea type="text" name="message" class="form-control" id="floatingMessage" ></textarea>
-        <label for="floatingMessage">Deixe aqui sua mensagem</label>
-      </div>
 
-      <button type="submit" class="btn btn-primary">Cadastre-se</button>
-      
-    </form>
-    
-  </div>
+      <%- include('./partials/footer') %>
 
-  <%- include('./partials/footer') %>
+  </body>
 
-</body>
 </html>

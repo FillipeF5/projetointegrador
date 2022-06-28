@@ -1,50 +1,54 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-    <%- include('./partials/head') %> 
+<%- include('./partials/head') %>
 
-<body>
-    <%- include('./partials/header') %>
+    <body>
+        <%- include('./partials/header') %>
 
-    <main id="login">
-        
-        <div class="container-lg">
-            
-            <div class="conteudo">
+            <main id="login">
 
-                <h1 class="h3 mb-3 fw-normal">Seja bem vindo (a)</h1>
-        
-                <div class="box-login">
+                <div class="container-lg">
 
-                    <a class="logo" href="index.html"> <img src="/images/logo.gif" alt="logo" width="100"> </a>
-                    <form>
-                        <div class="form-floating">
-                            <input type="email" id="floatEmail" class="form-control" placeholder="digite seu email">
-                            <label for="floatEmail">Email</label>
+                    <div class="conteudo">
+
+                        <h1 class="h3 mb-3 fw-normal">Seja bem vindo (a)</h1>
+
+                        <div class="box-login">
+
+                            <a class="logo" href="index.html"> <img src="/images/logo.gif" alt="logo" width="100"> </a>
+                            <form action="/login/logincliente" method="POST">
+                                <div class="form-floating">
+                                    <input type="email" id="floatEmail" class="form-control"
+                                        placeholder="digite seu email">
+                                    <label for="floatEmail">Email</label>
+                                </div>
+                                <div class="form-floating">
+                                    <input type="password" id="floatPassword" class="form-control"
+                                        placeholder="digite sua senha">
+                                    <label for="floatPassword">Senha</label>
+                                </div>
+
+
+                                <button class="btn-login" type="submit">Entrar</button>
+                                <button class="btn-google">Acessar com Google <img class="icon-google"
+                                        src="/images/google_icon-icons.com_62736.svg"></button>
+                                <button><a href="/login/register">Registre-se</a></button>
+
+                                <a href="#">esqueci minha senha</a>
+
+                            </form>
+
                         </div>
-                        <div class="form-floating">
-                            <input type="password" id="floatPassword" class="form-control" placeholder="digite sua senha">
-                            <label for="floatPassword">Senha</label>
-                        </div>
-                                                
 
-                        <button class="btn-login" type="submit">Entrar</button>
-                        <button class="btn-google">Acessar com Google <img class="icon-google" src="/images/google_icon-icons.com_62736.svg"></button>
-                        <button><a href="/login/register">Registre-se</a></button>
-
-                        <a href="#">esqueci minha senha</a>
-                        
-                    </form>
+                    </div>
 
                 </div>
 
-            </div>
-            
-        </div>
+            </main>
 
-    </main>
+            <%- include('./partials/footer') %>
 
-    <%- include('./partials/footer') %>
+    </body>
 
-</body>
 </html>

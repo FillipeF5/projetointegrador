@@ -1,22 +1,48 @@
-const { Carrinho, Produto, Cliente } = require('../database/models');
+const { Carrinho, Produto, Usuario, CarrinhoItem } = require('../database/models');
+const { Op } = require("sequelize");
+const session = require("express-session");
 
-const controlladorCarrinho = {
-    show: (req, res) => {
-        const produto = await Produto.findAll();
+const ControlladorCarrinho = {
+    show: async (req, res) => {
+        var produtos = await Produto.findOne();
 
-        res.render('carrinho');
+        res.render('carrinho', { produtos })
     },
     store: async (req, res) => {
-        const { id  } = req.session;   //buscar o id da sessao e usuario
+        
+        var cart = Carrinho.findOrCreate({
+            where: { id: id },
+            include: [{                                // include da model de Produtos
+                model: Produto,
+                as: 'produto'
+            }] 
+        })
 
-        const carrinho = await Carrinho.findOne({
-            where: { cliente_id:id }            //carrinho cujo id do cliente é == id usuario sessao
-        });
-        let idProduto = req.params.id;
-        await carrinho.addCartItem({ produto_id:idProduto, quantidade:0})   //idProduto: id req params
+        
+        // const usuario_id = req.session.usuario.id;   //buscar o id da sessao e usuario
 
-        return res.redirect('/carrinho', { carrinho })
+        // const carrinho = await CarrinhoItem.findAll({
+        //     where: { usuario_id: usuario_id },          //carrinho cujo id do user é == id usuario sessao
+        //     include: [{                                // include da model de Produtos
+        //         model: Produto,
+        //         as: 'produto'
+        //     }]            
+        // });
+        
+        res.render('carrinho', { cart });    
+    },
+    adicionar: async (req, res) => {
+        const produto_id = req.params.id;
+        const usuario_id = req.session.usuario.id;
+
+        CarrinhoItem.findOne({
+            where: { produto_id: produto_id, usuario_id: usuario_id }
+        })
+
+        res.render("carrinho")
+
     }
+    
 };
 
-module.exports = controlladorCarrinho;
+module.exports = ControlladorCarrinho;
